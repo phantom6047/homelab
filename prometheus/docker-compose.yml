@@ -31,6 +31,16 @@ services:
     networks:
       - monitoring
 
+  snmp-exporter:
+    image: prom/snmp-exporter:latest
+    container_name: snmp-exporter
+    restart: unless-stopped
+    ports:
+      - "9116:9116"
+    networks:
+      - monitoring
+
+
 networks:
   monitoring:
     name: monitoring
