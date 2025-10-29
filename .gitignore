@@ -5,4 +5,4 @@
 /n8n/n8n_data/
 /pihole/etc-pihole/
 /pihole/etc-dnsmasq.d/
-/prometheus/grafana_data/
+/prometheus/prometheus_data/
