@@ -6,3 +6,5 @@
 /pihole/etc-pihole/
 /pihole/etc-dnsmasq.d/
 /prometheus/prometheus_data/
+/tailscale/tailscale_data/
+/tailscale/tailscale_tmp/
