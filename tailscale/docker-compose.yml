@@ -11,6 +11,7 @@ services:
       - TS_USERSPACE=false
       - TS_ROUTES=${TS_ROUTES}
       - TS_ACCEPT_DNS=true
+      - TS_HOSTNAME=${HOSTNAME}
     volumes:
       - ./tailscale_data:/var/lib/tailscale
       - ./tailscale_tmp:/tmp
@@ -18,4 +19,10 @@ services:
     cap_add:
       - NET_ADMIN
       - NET_RAW
-    command: tailscaled
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        tailscaled --state=/var/lib/tailscale/tailscaled.state --socket=/var/run/tailscale/tailscaled.sock &
+        sleep 2
+        tailscale up --authkey=${TS_AUTHKEY} --advertise-routes=${TS_ROUTES} --accept-dns --hostname=${HOSTNAME}
+        wait
