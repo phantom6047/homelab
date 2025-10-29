@@ -2,6 +2,7 @@ services:
   openwebui:
     image: ghcr.io/open-webui/open-webui:slim
     container_name: openwebui
+    restart: unless-stopped
     ports:
       - "3100:8080"
     volumes:
