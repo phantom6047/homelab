@@ -11,8 +11,8 @@ services:
       - TS_ROUTES=192.168.1.0/24
       - TS_ACCEPT_DNS=true
     volumes:
-      - ./tailscale/tailscale_data:/var/lib/tailscale
-      - ./tailscale/tailscale_tmp:/tmp
+      - ./tailscale_data:/var/lib/tailscale
+      - ./tailscale_tmp:/tmp
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - NET_ADMIN
