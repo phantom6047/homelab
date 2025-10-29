@@ -1,1 +1,8 @@
 .env
+**/.env
+
+/grafana/data/
+/n8n/n8n_data/
+/pihole/etc-pihole/
+/pihole/etc-dnsmasq.d/
+/prometheus/data/
