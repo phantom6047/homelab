@@ -11,7 +11,7 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=${ADMIN_PASSWORD}
       - GF_USERS_ALLOW_SIGN_UP=false
     volumes:
-      - ./grafana_data:/var/lib/grafana
+      - grafana_data:/var/lib/grafana
     networks:
       - monitoring
 
@@ -19,3 +19,6 @@ networks:
   monitoring:
     external: true
     name: monitoring
+
+volumes: 
+  grafana_data:
