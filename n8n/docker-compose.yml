@@ -6,9 +6,9 @@ services:
     ports:
       - "5678:5678"
     environment:
+      - TZ=${TIMEZONE}
       - N8N_SECURE_COOKIE=false # Remove once reverse proxy is setup
       - GENERIC_TIMEZONE=${TIMEZONE}
-      - TZ=${TIMEZONE}
       - N8N_ENFORCE_SETTINGS_FILE_PERMISSIONS=true
       - N8N_RUNNERS_ENABLED=true
 
