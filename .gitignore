@@ -8,3 +8,5 @@
 /prometheus/prometheus_data/
 /tailscale/tailscale_data/
 /tailscale/tailscale_tmp/
+/nginx-proxy-manager/npm_data/
+/nginx-proxy-manager/npm_letsencrypt
