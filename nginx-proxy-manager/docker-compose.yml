@@ -16,4 +16,6 @@ services:
 
 volumes: 
   npm_data:
+    name: npm_data
   npm_letsencrypt:
+    name: npm_letsencrypt
