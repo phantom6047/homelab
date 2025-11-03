@@ -22,3 +22,4 @@ networks:
 
 volumes: 
   grafana_data:
+    name: grafana_data
