@@ -35,7 +35,6 @@ volumes:
   prometheus_data:
     name: prometheus_data
 
-
 networks:
   monitoring:
     name: monitoring
