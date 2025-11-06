@@ -13,8 +13,8 @@ services:
       - TS_ACCEPT_DNS=true
       - TS_HOSTNAME=${HOSTNAME}
     volumes:
-      - ./tailscale_data:/var/lib/tailscale
-      - ./tailscale_tmp:/tmp
+      - tailscale_data:/var/lib/tailscale
+      - tailscale_tmp:/tmp
       - /dev/net/tun:/dev/net/tun
     cap_add:
       - NET_ADMIN
@@ -26,3 +26,8 @@ services:
         sleep 2
         tailscale up --authkey=${TS_AUTHKEY} --advertise-routes=${TS_ROUTES} --accept-dns --hostname=${HOSTNAME}
         wait
+volumes:
+  tailscale_data:
+    name: tailscale_data
+  tailscale_tmp:
+    name: tailscale_tmp
