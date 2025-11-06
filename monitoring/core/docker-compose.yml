@@ -59,4 +59,3 @@ networks:
   monitoring:
     name: monitoring
     driver: bridge
-    external: true
