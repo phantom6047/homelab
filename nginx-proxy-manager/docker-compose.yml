@@ -10,6 +10,7 @@ services:
     environment:
       DB_SQLITE_FILE: "/data/database.sqlite"
       DISABLE_IPV6: 'true'
+      TZ: America/Denver
     volumes:
       - npm_data:/data
       - npm_letsencrypt:/etc/letsencrypt

@@ -16,6 +16,7 @@ services:
     image: grafana/promtail:latest
     container_name: promtail
     restart: unless-stopped
+    command: -config.file=/etc/promtail/config.yaml
     volumes:
       - /home/phantom6047/homelab/nginx-proxy-manager/logs:/var/log
       - ./config-promtail/config.yaml:/etc/promtail/config.yaml

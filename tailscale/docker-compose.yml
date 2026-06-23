@@ -1,6 +1,6 @@
 services:
   tailscale:
-    image: tailscale/tailscale:v1.90.9
+    image: tailscale/tailscale:latest
     container_name: tailscale
     hostname: ${HOSTNAME}
     restart: unless-stopped
@@ -16,6 +16,7 @@ services:
       - ./tailscale_data:/var/lib/tailscale
       - ./tailscale_tmp:/tmp
       - /dev/net/tun:/dev/net/tun
+      - /lib/modules:/lib/modules:ro
     cap_add:
       - NET_ADMIN
       - NET_RAW
